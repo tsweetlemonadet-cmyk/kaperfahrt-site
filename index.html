@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaperfahrt – A Life Under Sails</title>
+<meta name="description" content="An open-Caribbean pirate sandbox by a solo developer. Capture ships, build your fleet, shake living markets. Wishlist on Steam – coming December 2026.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:title" content="Kaperfahrt – A Life Under Sails">
+<meta property="og:description" content="Capture enemy ships and they join your fleet. Blockade a harbor and prices rise. An open-Caribbean pirate sandbox, coming December 2026.">
+<meta property="og:image" content="https://kaperfahrt.com/assets/og-image.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://kaperfahrt.com/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Kaperfahrt",
+  "alternateName": "Kaperfahrt – A Life Under Sails",
+  "description": "An open-Caribbean pirate sandbox. Capture enemy ships and they join your fleet, blockade harbors and watch living markets react, hunt the 23 captains of the Blacklist.",
+  "genre": ["Adventure", "Simulation", "Sandbox", "Strategy"],
+  "gamePlatform": "PC",
+  "operatingSystem": "Windows",
+  "applicationCategory": "Game",
+  "url": "https://kaperfahrt.com/",
+  "image": "https://kaperfahrt.com/assets/og-image.jpg",
+  "author": {"@type": "Organization", "name": "Kleinod"},
+  "publisher": {"@type": "Organization", "name": "Kleinod"},
+  "offers": {"@type": "Offer", "availability": "https://schema.org/PreOrder", "url": "https://store.steampowered.com/app/4943150/"}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rye&family=Caveat:wght@600&family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2B1A0D;
+    --ink-deep:#20130a;
+    --parchment:#E2D0A4;
+    --parchment-light:#EDDFBC;
+    --cream:#F7EDCC;
+    --oxblood:#731F17;
+    --sunset:#F59452;
+    --sunset-light:#FFC785;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+  body{background:var(--ink);color:var(--cream);font-family:'Alegreya',Georgia,serif;font-size:1.125rem;line-height:1.65}
+  img{max-width:100%;display:block}
+  a{color:var(--sunset-light)}
+  .log-note{font-family:'Caveat',cursive;font-size:1.5rem;color:var(--sunset-light);letter-spacing:.02em}
+  h2{font-family:'Rye',serif;font-weight:400;font-size:clamp(1.6rem,4vw,2.4rem);color:var(--cream);margin:.35em 0 .6em}
+  .btn{display:inline-block;padding:.85em 1.7em;border-radius:6px;font-family:'Alegreya',serif;font-weight:700;font-size:1.05rem;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}
+  .btn:hover{transform:translateY(-2px)}
+  .btn:focus-visible{outline:3px solid var(--sunset-light);outline-offset:3px}
+  .btn-primary{background:linear-gradient(135deg,var(--sunset-light),var(--sunset));color:var(--ink);box-shadow:0 4px 18px rgba(245,148,82,.35)}
+  .btn-ghost{border:2px solid var(--cream);color:var(--cream)}
+  .btn-ghost:hover{background:rgba(247,237,204,.1)}
+
+  /* Hero */
+  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;justify-content:center;text-align:center;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background:url('assets/hero.jpg') center 30%/cover no-repeat}
+  .hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,26,13,.15) 0%,rgba(43,26,13,.05) 35%,rgba(32,19,10,.82) 78%,var(--ink-deep) 100%)}
+  .hero-inner{position:relative;padding:3rem 1.25rem 4.5rem;max-width:820px}
+  .hero-inner .log-note{display:block;margin-bottom:1rem}
+  .hero-logo{width:min(430px,78vw);margin:0 auto 1.4rem;filter:drop-shadow(0 10px 30px rgba(0,0,0,.55))}
+  .tagline{font-family:'Rye',serif;font-size:clamp(1.15rem,3vw,1.6rem);color:var(--cream);letter-spacing:.04em;margin-bottom:.4rem}
+  .subline{color:var(--parchment);font-size:1.05rem;margin-bottom:1.8rem}
+  .hero-ctas{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+  /* Sections */
+  section{padding:4.5rem 1.25rem}
+  .wrap{max-width:900px;margin:0 auto}
+  .center{text-align:center}
+
+  .pitch p{font-size:1.2rem;max-width:44rem;margin:0 auto 1.1em;color:var(--parchment-light)}
+  .pitch p strong{color:var(--sunset-light);font-weight:700}
+
+  /* Feature cards: sea-chart frames on parchment */
+  .features{background:var(--ink-deep)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.4rem;margin-top:2.2rem}
+  .card{background:var(--parchment);color:var(--ink);border-radius:10px;padding:1.5rem 1.4rem;position:relative;box-shadow:0 6px 24px rgba(0,0,0,.35)}
+  .card::before{content:"";position:absolute;inset:7px;border:1px solid rgba(115,31,23,.55);border-radius:6px;pointer-events:none}
+  .card::after{content:"";position:absolute;inset:11px;border:1px solid rgba(115,31,23,.3);border-radius:4px;pointer-events:none}
+  .card h3{font-family:'Rye',serif;font-weight:400;font-size:1.15rem;color:var(--oxblood);margin-bottom:.5em}
+  .card p{font-size:1rem;line-height:1.55}
+
+  /* Playtest band */
+  .playtest{background:var(--oxblood);text-align:center}
+  .playtest h2{margin-top:0}
+  .playtest p{max-width:38rem;margin:0 auto 1.6rem;color:var(--cream)}
+  .playtest .btn-primary{box-shadow:0 4px 18px rgba(0,0,0,.35)}
+
+  /* Trailer */
+  .trailer .frame{aspect-ratio:16/9;background:var(--ink-deep);border:2px solid rgba(226,208,164,.25);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--parchment)}
+  .trailer iframe{width:100%;height:100%;border:0;border-radius:8px}
+
+  footer{background:var(--ink-deep);padding:2.5rem 1.25rem;text-align:center;font-size:.95rem;color:var(--parchment)}
+  footer .log-note{font-size:1.35rem;display:block;margin-bottom:.6rem}
+  footer a{color:var(--parchment)}
+  footer nav{margin-top:.8rem;display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-bg" role="img" aria-label="A pirate flagship leads its fleet out of a harbor town into the sunset"></div>
+  <div class="hero-shade"></div>
+  <div class="hero-inner">
+    <span class="log-note">From the logbook of a solo captain</span>
+    <img class="hero-logo" src="assets/logo.png" alt="Kaperfahrt" width="900" height="691">
+    <p class="tagline">A Life Under Sails</p>
+    <p class="subline">An open-Caribbean pirate sandbox. Planned for December 2026.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="https://store.steampowered.com/app/4943150/?utm_source=website&amp;utm_campaign=landing&amp;utm_content=hero_wishlist">Wishlist on Steam</a>
+      <a class="btn btn-ghost" href="#playtest">Join the Playtest</a>
+    </div>
+  </div>
+</header>
+
+<section class="pitch center">
+  <div class="wrap">
+    <span class="log-note">Entry one. Why this ship exists</span>
+    <h2>The successor I waited twenty years for</h2>
+    <p>Somewhere around 2004, a pirate game ate my childhood summers. It never got a worthy successor, so I stopped waiting and started building one.</p>
+    <p>Kaperfahrt is a living Caribbean. <strong>Board an enemy ship and it sails under your flag from that day on.</strong> Blockade a harbor and watch grain prices climb, because the economy truly reacts. Hunt the 23 infamous captains of the Blacklist, each convinced they are the main character.</p>
+  </div>
+</section>
+
+<section class="features">
+  <div class="wrap center">
+    <span class="log-note">Charted waters</span>
+    <h2>What you will find at sea</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Your Fleet</h3>
+        <p>Every ship you capture becomes yours. Up to four sail into battle at your side, in formation, under one flag.</p>
+      </div>
+      <div class="card">
+        <h3>A Living Economy</h3>
+        <p>Ports produce, trade and starve. Cut a supply line and the markets remember who did it.</p>
+      </div>
+      <div class="card">
+        <h3>The Blacklist</h3>
+        <p>23 infamous captains with their own agendas roam the map. Hunt them your way, and take their ships home.</p>
+      </div>
+      <div class="card">
+        <h3>Weather That Matters</h3>
+        <p>Calm, breeze, fresh wind and storm decide how brave you sail. The sea sets the terms.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="playtest" id="playtest">
+  <div class="wrap">
+    <span class="log-note">All hands wanted</span>
+    <h2>Playtest signups are open</h2>
+    <p>Sign up directly on the Steam page. The first waves start as soon as the build meets the bar, and your feedback lands right inside the game, on a literal wish board.</p>
+    <a class="btn btn-primary" href="https://store.steampowered.com/app/4943150/?utm_source=website&amp;utm_campaign=landing&amp;utm_content=playtest_band">Request Access on Steam</a>
+  </div>
+</section>
+
+<section class="trailer">
+  <div class="wrap center">
+    <span class="log-note">Moving pictures</span>
+    <h2>Trailer</h2>
+    <div class="frame">
+      <!-- Sobald der Trailer auf YouTube public ist, diesen Block durch das iframe ersetzen und VIDEO_ID eintragen:
+      <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="Kaperfahrt Trailer" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      -->
+      <p>The trailer drops with the announcement. Until then, the sea keeps its secrets.</p>
+    </div>
+    <p style="margin-top:1.6rem"><a class="btn btn-primary" href="https://store.steampowered.com/app/4943150/?utm_source=website&amp;utm_campaign=landing&amp;utm_content=below_trailer">Wishlist on Steam</a></p>
+  </div>
+</section>
+
+<!-- Social-Proof-Sektion. Nach dem Playtest mit echten Stimmen fuellen und einkommentieren:
+<section class="center">
+  <div class="wrap">
+    <span class="log-note">Voices from the first waves</span>
+    <h2>What early captains say</h2>
+    <p>"Zitat eines Playtesters." – Steam-Name</p>
+  </div>
+</section>
+-->
+
+<footer>
+  <span class="log-note">Hoist the sails. The Caribbean is waiting.</span>
+  <p>Kaperfahrt is built by Kleinod, a one-person studio from Germany.</p>
+  <nav>
+    <a href="https://store.steampowered.com/app/4943150/?utm_source=website&amp;utm_campaign=landing&amp;utm_content=footer">Steam</a>
+    <a href="games-like-sid-meiers-pirates.html">For fans of the classic</a>
+    <a href="press.html">Press Kit</a>
+    <a href="impressum.html">Impressum &amp; Privacy</a>
+  </nav>
+</footer>
+
+</body>
+</html>
