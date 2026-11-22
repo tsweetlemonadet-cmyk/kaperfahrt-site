@@ -29,8 +29,9 @@
   p,li{color:var(--parchment-light)}
   p{margin-bottom:1em}
   ul{padding-left:1.2rem;margin-bottom:1em}
-  dl{display:grid;grid-template-columns:max-content 1fr;gap:.35rem 1.2rem;background:var(--parchment);color:var(--ink);padding:1.2rem 1.3rem;border-radius:8px}
+  dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:.35rem 1.2rem;background:var(--parchment);color:var(--ink);padding:1.2rem 1.3rem;border-radius:8px}
   dt{font-weight:700;color:var(--oxblood)}dl a{color:var(--oxblood)}
+  @media (max-width:480px){dl{grid-template-columns:minmax(0,1fr);row-gap:0}dd{margin-bottom:.45rem;overflow-wrap:anywhere}dd:last-child{margin-bottom:0}}
   .assets a{display:inline-block;margin:.25rem .8rem .25rem 0}
 </style>
 </head>
@@ -51,7 +52,6 @@
     <dt>Engine</dt><dd>Godot</dd>
     <dt>Steam</dt><dd><a href="https://store.steampowered.com/app/4943150/">store.steampowered.com/app/4943150</a></dd>
     <dt>Contact</dt><dd><a href="mailto:kleinodgames@gmail.com">kleinodgames@gmail.com</a></dd>
-    <dt>Social</dt><dd><a href="https://www.youtube.com/@KleinodGames">youtube.com/@KleinodGames</a> · <a href="https://www.tiktok.com/@kleinodgames">tiktok.com/@kleinodgames</a></dd>
   </dl>
 
   <h2>Description</h2>
@@ -76,7 +76,7 @@
     <a href="assets/og-image.jpg" download>Key art (1200x630)</a>
     <a href="assets/hero.jpg" download>Key art wide (1920px)</a>
     <a href="assets/press-screenshots.zip" download>Screenshots (ZIP)</a>
-    <a href="assets/kaperfahrt-announcement-trailer.mp4" download>Announcement Trailer (MP4, 1080p)</a> <a href="https://www.youtube.com/watch?v=oH-mg3lP2Hk">Announcement Trailer (YouTube)</a>
+    <a href="assets/kaperfahrt-announcement-trailer.mp4" download>Announcement Trailer (MP4, 1080p)</a>
   </p>
   <p>Higher resolutions and additional material available on request. Everything on this page may be used freely for coverage of the game.</p>
 
