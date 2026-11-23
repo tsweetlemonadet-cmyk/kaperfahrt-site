@@ -1,0 +1,7 @@
+# Diese Dateien liegen im Repository, werden aber nicht auf kleinodgames.com ausgeliefert.
+exclude:
+  - README.md
+  - WEBSITE-STATUS.md
+  - assets/press.html
+  - kaperfahrt-announcement-trailer.mp4
+  - assets/kaperfahrt-announcement-trailer.mp4
